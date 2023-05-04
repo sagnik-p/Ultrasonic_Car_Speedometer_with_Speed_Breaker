@@ -1,0 +1,17 @@
+Ultrasonic Distance Sensor 1 :
+Position: starting extreme
+trig pin=7
+echo pin=8
+
+Ultrasonic Distance Sensor 2 :
+Position: middle
+trig pin=6
+echo pin=5
+
+Ultrasonic Distance Sensor 3 :
+Position: ending extreme
+trig pin=11
+echo pin=12
+
+Left servo output pin = 9
+Right servo output pin = 10
