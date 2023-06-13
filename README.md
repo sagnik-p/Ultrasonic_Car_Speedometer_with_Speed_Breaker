@@ -10,10 +10,10 @@ You can refer to the documentation for the project [here](documentation.pdf) tha
 This is a easy to understand alternative of speed cameras that measure speed of a car may analysing the distance of the car from the camera in each frame.
 
 To make this project, you need these parts
-1. Arduino Board
-2. servo motor * 2
-3. ultrasonic distance sensor * 3
-4. a speed breaker mechanism that can be controlled by a servo. In my case, I used a modified cylinder rotated by two servo motors
+1. Arduino Board          the brains of the operation
+2. servo motor * 2    to control the speed breaker  ( at a certain angle, speed breaker is effective )
+3. ultrasonic distance sensor * 3                to measure the distance of the car from the road side
+4. a speed breaker mechanism that can be controlled by a servo. In my case, I used a modified cylinder rotated by two servo motors on either sides
 
 Make The circuit according to the [wiring instructions](Wiring_Instructions.txt).
 Upload The [code](Arduino_code.ino) into the arduino board.
