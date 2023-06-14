@@ -78,6 +78,7 @@ void setup() {
  
  
 double measure1() {
+  //Measure the distance by the first sensor
   digitalWrite(trigPin1, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin1, HIGH);
@@ -90,6 +91,7 @@ double measure1() {
  
 
 double measure2() {
+  //Measure the distance by the second sensor
   digitalWrite(trigPin2, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin2, HIGH);
@@ -104,6 +106,7 @@ double measure2() {
 
 
 double measure3() {
+  //Measure the distance by the third sensor
   digitalWrite(trigPin3, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin3, HIGH);
@@ -117,6 +120,7 @@ double measure3() {
 
 void activate()
 {
+  // Do whatever you have to do once condition is met
   servol.write(180);
   servor.write(0);
   isActivated = true;
@@ -129,6 +133,7 @@ void activate()
 
 void deactivate()
 {
+  //Revert all the changes made in the activate function
   servol.write(0);
   servor.write(180);
   isActivated = false;
@@ -140,7 +145,7 @@ void deactivate()
 
 void loop()
 {
-  
+  //defining a goto tag
   start:
   m3 = measure3();
   if(m3 <= trigDistance)
@@ -148,13 +153,11 @@ void loop()
    deactivate();
   }
   
-  m1 = measure1();
-  m1tag:
-  if(m1 >= 1900)
+  do
   {
-    m1 = measure1();
-    goto m1tag;
-  }
+    m1=measure1();
+  }while(m1>=1900)
+
   
   
   if(m1 <= trigDistance)
