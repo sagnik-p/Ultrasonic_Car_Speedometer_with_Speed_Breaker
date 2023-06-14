@@ -30,19 +30,19 @@ Right servo output pin = 10
 // include the servo library
 #include <Servo.h>
 
-// define variables
+// define the pin numbers and the variables used for calculation
 const int trigPin1 = 7;
 const int echoPin1 = 8;
 const int trigPin2 = 6;
 const int echoPin2 = 5;
 const int trigPin3 = 11;
 const int echoPin3 = 12;
-int out1 = 13;
-int out2 = 13;
+const int out1 = 13;
+const int out2 = 13;
 Servo servol;
 Servo servor;
-int servolpin = 9;
-int servorpin = 10;
+const int servolpin = 9;
+const int servorpin = 10;
 unsigned long mil;
 long duration1;
 double distance1;
@@ -57,7 +57,7 @@ double m1,m2,m3;
 boolean isActivated = false;
 
 // set the trigger velocity according to your need
-double triggerVelocity=0.7; // in m/s
+const double triggerVelocity=0.7; // in m/s
 
 void setup() {
   pinMode(trigPin1, OUTPUT); 
